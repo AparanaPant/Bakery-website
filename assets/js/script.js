@@ -30,55 +30,31 @@ function closeForm() {
 //****************************nav js ends***************************//
 
 //----------------js for parallax slider (below nav)......//
+var slideNo = 1;
+Carousel(slideNo);
 
-var imagesArray = ["assets/images/yum.jpg",
-                   "assets/images/wow.jpg",
-                   "assets/images/break.jpg",
-                   "assets/images/y.jpg",
-                   "assets/images/news.jpg"];
-
-function preloadImg(pictureUrls, callback) {
-  var i, j, loaded = 0;
-  var imagesArray = [];
-
-  for (i = 0, j = pictureUrls.length; i < j; i++) {
-    imagesArray.push(new Image());
+function Carousel(n){
+  var slides = document.getElementsByClassName("image-container");
+ 
+  if (n > slides.length) {
+    slideNo = 1;
   }
-  for (i = 0, j = pictureUrls.length; i < j; i++) {
-    (function (img, src) {
-      img.onload = function () {
-        if (++loaded == pictureUrls.length && callback) {
-          callback(imagesArray);
-        }
-      };
-      img.src = src;
-    }(imagesArray[i], pictureUrls[i]));
+  if (n < 1) {
+    slideNo = slides.length;
   }
-};
-
-
-function roll(imagesArray, currentPos, max){
-  if (max < 0) {
-    return;
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  var slide = $('.parallax-mirror').find('img').attr('src', imagesArray[currentPos].src);
-  slide.fadeIn(2500, function() {
-    slide.fadeOut(2500, function() {
-      currentPos++;
-      if(currentPos >= imagesArray.length){
-        currentPos = 0;
-        max--;
-      }
-      roll(imagesArray, currentPos, max);
-    });
-  });
+  slides[slideNo - 1].style.display = "block";
+ 
+
 }
-
-$(function () {
-  preloadImg(imagesArray, function (imagesArray) {
-    roll(imagesArray, 0, 3);
-  });
-});
+function newSlide(n){
+  Carousel(slideNo += n);
+}
+function currentSlide(n){
+  Carousel(slideNo = n);
+}
 
 //********************************js for parallax slider ends**************************************** */
 

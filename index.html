@@ -12,7 +12,7 @@
     <!-------------------buttons-by shreya i guess--------------------------------------------->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body style="background:pink">
+<body>
  <!--================================= main nav bar ==================================================-->
      <section class="nav-bar">
         <div class="nav-container">
@@ -77,9 +77,24 @@
   </section>
   <!---**********************************NAV BAR ENDS HERE************************************************-->
   
-  <!-----------------------------------parallax slider start ------------------------------------------->
-  <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/yum.jpg"></div>
-  <!--***************************parallax slider ends*************************************************-->
+  <!-----------------------------------slider start ------------------------------------------->
+  <div class="slideshow-container">
+
+    <div class="image-container">
+      <img src="assets/images/yum.jpg" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="assets/images/y.jpg" class="image fade" />
+    </div>
+    <div class="image-container">
+      <img src="assets/images/cake.jpg" class="image fade" />
+    </div>
+
+    <a class="prev" onclick="newSlide(-1)">&#10094;</a>
+    <a class="next" onclick="newSlide(1)">&#10095;</a>      
+
+  </div>
+  <!--*************************** slider ends*************************************************-->
 
   <!-------------------THree boxes starts--------------------------------------------------------------->
   <div class="threebox">
