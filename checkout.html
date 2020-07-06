@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Winery</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="assets/css/style.css" media="screen" type="text/css" />
-
-</head>
-
-<body>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,11 +9,297 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!------------This link is for icons in the page------------------------------------------->
     <script src="https://kit.fontawesome.com/4e40b5e662.js" crossorigin="anonymous"></script>
+    <!-------------------buttons-by shreya i guess--------------------------------------------->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
     
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container1 {
+
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  margin-left: 10px;
+  margin-right: 2px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 20%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+/*hr {
+  border: 1px solid lightgrey;
+}
+*/
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width:1373px) {
+  /*.row {
+    flex-direction: column-reverse;
+  }*/
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+/*social media*/
+#social {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.smGlobalBtn{ /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 2px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+}
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+}
+
+/* twitter button class*/
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+}
+
+.twitterBtn:hover{
+      color: #00ABE3;
+      background: #fff;
+}
+/* google plus button class*/
+.googleplusBtn{
+    background: #e64522;
+}
+
+.googleplusBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d5"; /* add googleplus icon */
+}
+
+.googleplusBtn:hover{
+      color: #e64522;
+      background: #fff;
+}
+
+/* linkedin button class*/
+.linkedinBtn{
+    background: #0094BC;
+}
+
+.linkedinBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover{
+      color: #0094BC;
+      background: #fff;
+}
+/*drop down*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+  position: static;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ccc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* GALLERY */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* SEARCH */
+/*input[type=text] {
+  margin-top:10px;
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;*/
+  /*background-color: white;*/
+  /*background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;*/
+/*}*/
+input[type=text] {
+  margin-top: 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  
+
+  transition: width 0.4s ease-in-out;
+
+  }
+
+input[type=text]:focus {
+  width: 100%;
+}
+    
+    </style>
 </head>
 <body>
-    <!--================================= main nav bar ==================================================-->
-        <section class="nav-bar">
+ <!--================================= main nav bar ==================================================-->
+     <section class="nav-bar">
         <div class="nav-container">
             <div class="brand">
                 <a href="index.html"><img src="assets/images/logo.png"></a>
@@ -83,219 +359,244 @@
                 </ul>
             </nav>
         </div>
-    </section>
-    <!---**********************************NAV BAR ENDS HERE************************************************-->
+  </section>
+  <!---**********************************NAV BAR ENDS HERE************************************************-->
+<div class="row" style="margin-top:150px;">
+  <div class="col-75">
+    <div class="container1">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+       <!--      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+             --><input type="text" id="fname" name="firstname" placeholder="Full name">
+           <!--  <label for="email"><i class="fa fa-envelope"></i> Email</label> -->
+            <input type="text" id="email" name="email" placeholder="Email">
+           <!--  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label> -->
+            <input type="text" id="adr" name="address" placeholder="Address">
+           <!--  <label for="city"><i class="fa fa-institution"></i> City</label> -->
+            <input type="text" id="city" name="city" placeholder="City">
 
-<body id="checkout-page">
+            <div class="row">
+              <div class="col-50">
+               <!--  <label for="state">State</label> -->
+                <input type="text" id="state" name="state" placeholder="State">
+              </div>
+              <div class="col-50">
+               <!--  <label for="zip">Zip</label> -->
+                <input type="text" id="zip" name="zip" placeholder="Zip">
+              </div>
+            </div>
+          </div>
 
-<div id="site">
-	<header id="masthead">
-		<h1><span class="tagline"></h1>
-	</header>
-	<div id="content">
-		<h1>Checkout</h1>
-			<table id="checkout-cart" class="shopping-cart">
-			  <thead>
-				<tr>
-					<th scope="col">Item</th>
-					<th scope="col">Qty</th>
-					<th scope="col">Price</th>
-				</tr>
-			  </thead>
-			  <tbody>
-			  
-			  </tbody>
-			</table>
-		 <div id="pricing">
-			
-			<p id="shipping">
-				<strong>Shipping</strong>: <span id="sshipping"></span>
-			</p>
-			
-			<p id="sub-total">
-				<strong>Total</strong>: <span id="stotal"></span>
-			</p>
-		 </div>
-		 
-		 <form action="order.html" method="post" id="checkout-order-form">
-		 	<h2>Your Details</h2>
-		 	
-		 	<fieldset id="fieldset-billing">
-		 		<legend>Billing</legend>
-		 		<div>
-		 			<label for="name">Name</label>
-		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="email">Email</label>
-		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
-		 		</div>
-		 		<div>
-		 			<label for="city">City</label>
-		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="address">Address</label>
-		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="zip">ZIP Code</label>
-		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="country">Country</label>
-		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
-		 				<option value="">Select</option>
-		 				<option value="US">USA</option>
-		 				<option value="IT">Italy</option>
-		 			</select>
-		 		</div>
-		 	</fieldset>
-		 	
-		 	<div id="shipping-same">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
-		 	
-		 	<fieldset id="fieldset-shipping">
-		 		
-		 		<legend>Shipping</legend>
-		 		
-		 		<div>
-		 			<label for="sname">Name</label>
-		 			<input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="semail">Email</label>
-		 			<input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
-		 		</div>
-		 		<div>
-		 			<label for="scity">City</label>
-		 			<input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="saddress">Address</label>
-		 			<input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="szip">ZIP Code</label>
-		 			<input type="text" name="szip" id="szip" data-type="string" data-message="This field cannot be empty" />
-		 		</div>
-		 		<div>
-		 			<label for="scountry">Country</label>
-		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
-		 				<option value="">Select</option>
-		 				<option value="US">USA</option>
-		 				<option value="IT">Italy</option>
-		 			</select>
-		 		</div>
-		 	</fieldset>
-		 	
-		 	<p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
-		 
-		 </form>
-	</div>
-	
-	
+          <div class="col-50">
+            <h3>Payment or scan to pay</h3>
+            <!-- <label for="fname">Accepted Cards</label> -->
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+           <!--  <label for="cname">Name on Card</label> -->
+            <input type="text" id="cname" name="cardname" placeholder="Card Name">
+            <!-- <label for="ccnum">Credit card number</label> -->
+            <input type="text" id="ccnum" name="cardnumber" placeholder="Card Number">
+         <!--    <label for="expmonth">Exp Month</label> -->
+            <input type="text" id="expmonth" name="expmonth" placeholder="Exp Month">
+            <div class="row">
+              <div class="col-50">
+                <!-- , -->
+                <input type="text" id="expyear" name="expyear" placeholder="Exp Year">
+              </div>
+              <div class="col-50">
+               <!--  <label for="cvv">CVV</label> -->
+                <input type="text" id="cvv" name="cvv" placeholder="CVV">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <br>
+        <label>
+         <center><input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label></center> 
+       <center> <input type="button" value="Order" class="btn"></center>
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container1">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+    <hr>
+   <center> <div class="col-25">
+    <div class="container">
+      <p> <b>Scan on your phone to pay </b></p>
+     
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            function generateBarCode()
+            {
+                // var nric = $('#text').val();
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+                $('#barcode').attr('src', url);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <input id="text" type="text" 
+            value="NRIC or Work Permit" style="Width:20%" -->
+       <!--      onblur='generateBarCode();' />  -->
+
+      <img id='barcode' 
+            src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" 
+            alt="" 
+            title="Payment" 
+            width="200" 
+            height="200" />
+    </body>
+    </div>
+  </div>
+  </div>
 
 </div>
 
+<!--popup-->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
 
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
-<!--------------------------------footer starts----------------------------------------->
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+
+</body>
 <footer class="footer-distributed">
 
-        <div class="footer-left">
-  
-          <h3>BAKERY<span> COMPANY</span></h3>
-  
-          <p class="footer-links">
-            <a href="#" class="link-1">Home</a>
-            
-            <a href="#">Blog</a>
-          
-            <a href="#">Pricing</a>
-          
-            <a href="#">About</a>
-            
-            <a href="#">Faq</a>
-            
-            <a href="#">Contact</a>
-          </p>
-  
-          <p class="footer-company-name">Bakery© 2015</p>
-        </div>
-  
-        <div class="footer-center">
-  
-          <div>
-          <a name="contact">  <i class="fa fa-map-marker"></i></a>
-            <p><span>MAITIDEVI, KATHMANDU</p>
-          </div>
-  
-          <div>
-            <i class="fa fa-phone"></i>
-            <p>345345353455</p>
-          </div>
-  
-          <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">bakery@gmail.com</a></p>
-          </div>
-          <br>
-          <div>
-            <a class="facebookBtn smGlobalBtn" href="social-media-profile-url" ></a>
-      <a class="twitterBtn smGlobalBtn" href="social-media-profile-url" ></a>
-      <a class="googleplusBtn smGlobalBtn" href="social-media-profile-url" ></a>
-      <a class="linkedinBtn smGlobalBtn" href="social-media-profile-url" ></a>
-    </div>
-        </div>
-  
-        <div class="footer-right">
-  
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbakerycafe&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
-          width="280" height="350" style="border:none;overflow:hidden" 
-         scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-  
-        </div>
-  
-      </footer>
-       <!---------------------------login popup----------------------------------------------->
-  <div class="form-popup" id="myForm" >
+      <div class="footer-left">
 
-        <form  action="/action_page.php" class="form-container">
-    
-        <span class="close" onclick="closeForm()">&times;</span> <br>
-    
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-       
-          <button type="submit" class="btn">Login</button> <hr>
-          <p> <b>Or login via social media </p> <br>
-        <center><a href="https://www.facebook.com/" class="fbbtn" style="color:  #3B5998">
-              <i class="fa fa-facebook fa-fw" style="color:  #3B5998"></i> Login with Facebook
-             </a></center> <br> 
-              <center><a href="https://www.twitter.com/" class="twitterbtn" style="color: #55ACEE">
-              <i class="fa fa-twitter fa-fw" style="color: #55ACEE"></i> Login with Twitter
-             </a></center> <br> 
-              <center><a href="https://www.gmail.com/" class="googlebtn"style="color: red">
-              <i class="fa fa-google fa-fw" style="color: red"></i> Login with Google
-             </a></center> <hr>
-             <p><b> Don't have an account?</b> <a href="#"  style="color: #55ACEE"> SignUp </a> </p>
-        </form>
+        <h3>BAKERY<span> COMPANY</span></h3>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          
+          <a href="#">Blog</a>
+        
+          <a href="#">Pricing</a>
+        
+          <a href="#">About</a>
+          
+          <a href="#">Faq</a>
+          
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Bakery© 2015</p>
       </div>
-      
-      <!--**********************************login pop up ends*****************************************-->
 
+      <div class="footer-center">
 
- <!--####################################### SCRIPTS ########################################################-->
+        <div>
+        <a name="contact">  <i class="fa fa-map-marker"></i></a>
+          <p><span>MAITIDEVI, KATHMANDU</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>345345353455</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">bakery@gmail.com</a></p>
+        </div>
+        <br>
+        <div>
+          <a class="facebookBtn smGlobalBtn" href="social-media-profile-url" ></a>
+    <a class="twitterBtn smGlobalBtn" href="social-media-profile-url" ></a>
+    <a class="googleplusBtn smGlobalBtn" href="social-media-profile-url" ></a>
+    <a class="linkedinBtn smGlobalBtn" href="social-media-profile-url" ></a>
+  </div>
+      </div>
+
+      <div class="footer-right">
+       
+
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbakerycafe&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
+        width="280" height="350" style="border:none;overflow:hidden" 
+       scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" ></iframe>
+    
+
+      </div>
+
+    </footer>
+ <!---------------------------login popup----------------------------------------------->
+ <div class="form-popup" id="myForm" >
+
+  <form  action="/action_page.php" class="form-container">
+
+  <span class="close" onclick="closeForm()">&times;</span> <br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+    <button type="submit" class="btn">Login</button> <hr>
+    <p> <b>Or login via social media </p> <br>
+  <center><a href="https://www.facebook.com/" class="fbbtn" style="color:  #3B5998">
+        <i class="fa fa-facebook fa-fw" style="color:  #3B5998"></i> Login with Facebook
+       </a></center> <br> 
+        <center><a href="https://www.twitter.com/" class="twitterbtn" style="color: #55ACEE">
+        <i class="fa fa-twitter fa-fw" style="color: #55ACEE"></i> Login with Twitter
+       </a></center> <br> 
+        <center><a href="https://www.gmail.com/" class="googlebtn"style="color: red">
+        <i class="fa fa-google fa-fw" style="color: red"></i> Login with Google
+       </a></center> <hr>
+       <p><b> Don't have an account?</b> <a href="#"  style="color: #55ACEE"> SignUp </a> </p>
+  </form>
+</div>
+
+<!--**********************************login pop up ends*****************************************-->
+
+  <!--####################################### SCRIPTS ########################################################-->
 
     <!------------------------- import jquery for nav------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!--scrpt for menu page------------------------------------------------>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.shop.js"></script>
+
+    <!----------------for slider ------------------------->
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
+ 
    <!----------------------------Main script file-------------------------->
    <script src="assets/js/script.js"></script>
-</body>
-</html>	
+ 
+ </body>
+ </html>
