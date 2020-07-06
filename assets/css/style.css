@@ -1,0 +1,1313 @@
+/*======================Nav style=======================================*/
+.nav-bar {
+    top: -0.1px;
+    height: 75px;
+     background: #262626;
+     position: fixed;
+    width: 100%;
+    z-index: 1;
+    }
+    html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+  }
+    
+    .brand {
+      position: absolute;
+      padding-left: 20px;
+      float: left;
+      line-height: 70px;
+      text-transform: uppercase;
+      font-size: 1.4em;
+    }
+    .brand a img {
+        max-height: 70px;
+    }
+    .brand a,
+    .brand a:visited {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    nav {
+      float: right;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      float: left;
+      position: relative;
+    }
+    nav ul li a,
+    nav ul li a:visited {
+      display: block;
+      padding: 0 20px;
+      line-height: 70px;
+      background: #262626;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    nav ul li a:hover,
+    nav ul li a:visited:hover {
+      background: #2ab1ce;
+      color: #ffffff;
+    }
+    nav ul li a:not(:only-child):after,
+    nav ul li a:visited:not(:only-child):after {
+      padding-left: 4px;
+      content: ' ▾';
+    }
+    nav ul li ul li {
+      min-width: 190px;
+    }
+    nav ul li ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+    
+    .nav-dropdown {
+      position: absolute;
+      display: none;
+      z-index: 1;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    }
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #262626;
+      height: 70px;
+      width: 70px;
+    }
+    
+    @media only screen and (max-width: 798px) {
+      .nav-mobile {
+        display: block;
+  
+      }
+    
+      nav {
+        width: 100%;
+        padding: 70px 0 15px;
+      }
+      nav ul {
+        display: none;
+      }
+      nav ul li {
+        float: none;
+      }
+      nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+        padding-left: 25%;
+         
+      }
+      nav ul li ul li a {
+        padding-left: 30%;
+      }
+    
+      .nav-dropdown {
+        position: static;
+      }
+        .brand a img {
+            max-height: 60px;
+            margin-top: 5px;
+        }
+    }
+    @media screen and (min-width: 799px) {
+      .nav-list {
+        display: block !important;
+      }
+    
+    }
+    #nav-toggle {
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      cursor: pointer;
+      padding: 10px 35px 16px 0px;
+    }
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: #ffffff;
+      position: absolute;
+      display: block;
+      content: '';
+      transition: all 300ms ease-in-out;
+    }
+    #nav-toggle span:before {
+      top: -10px;
+    }
+    #nav-toggle span:after {
+      bottom: -10px;
+    }
+    #nav-toggle.active span {
+      background-color: transparent;
+    }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0;
+    }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg);
+    }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg);
+    }
+    
+    article {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    nav li input{
+        margin: 21px;
+    }
+  
+/***********************************nav css ends*************************************************/
+
+/*--------------------------login pop up starts----------------------*/
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn{
+  height: 50px;
+}
+.close {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+/* Add a red background color to the cancel button */
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*===================login pop up ends===============================================*/
+
+/*--------------------------------- slider csss ------------------------------------------------*/
+
+    .parallax-window {
+      min-height: 600px;
+      position:relative;
+    
+    }
+    .ok {
+      font-size:50px;
+      background:gray;
+      color:blue;
+      height:500px;
+      width:100%;
+    }
+/***********************************slider css ends*************************************************/
+
+/*--------------------------------- Three boxes csss ------------------------------------------------*/
+
+.threebox{
+    background-color:#f9f6f2 ;
+    text-align: center;
+    padding: 60px 0px 60px 0px;
+  
+  }
+  
+  .about-inner-wrap{
+    width:70%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+  }
+  .each-box{
+    width:325px;
+    height:fit-content;
+    background: white;
+  }
+  .each-box h3 ,
+  .each-box p
+  {
+    margin:15px 10px 15px 10px;
+    box-sizing: border-box;
+    
+  }
+  .each-box img {
+    width:100%;
+    height:100%;
+  }
+  @media screen and (max-width:1468px){
+  
+    .about-inner-wrap{
+      width:80%;}
+  }
+  @media screen and (max-width:1268px){
+  
+    .about-inner-wrap{
+      width:90%;}
+  }
+  @media screen and (max-width:1120px){
+  
+    .about-inner-wrap{
+     width:80%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
+    .each-box{
+      width:350px;
+      margin-top:20px;
+    }
+  }
+  @media screen and (max-width:880px){
+  
+    .about-inner-wrap{
+     width:90%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
+    .each-box{
+      width:350px;
+      margin-top:20px;
+    }
+  }
+  @media screen and (max-width:780px){
+  
+    .about-inner-wrap{
+     width:80%;
+      
+    }
+    .each-box{
+      width:100%;
+      margin-top:20px;
+    }
+    #about-us{
+      
+      padding-top:30px;
+  
+  }
+  
+  }
+
+
+/***********************************three boxes css ends*************************************************/
+
+
+/*--------------------------------- ABOUT US csss --------------------------------------------------*/
+.about-section{
+    background:url(../images/f1.jpg)  no-repeat left;
+    background-size: 65%;
+    background-color:#f9f6f2 ;
+    overflow: hidden;
+    padding:110px 0;
+    }
+  
+  .inner-container{
+    width: 55%;
+    float:right;
+    background-color: #fdfdfd;
+    padding:80px;
+  
+  }
+  .inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .text{
+    font-size: 13px;
+    color:#545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+  .skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  @media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+  }
+  @media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding:100px 40px;
+    }
+    .inner-container{
+        width:100%;
+  
+    }
+  }
+  @media screen and (max-width:600px){
+    .about-section{
+        padding:0;
+    }
+    .inner-container{
+        padding: 60px;
+  
+    }
+   }
+  
+/*********************************** ABOUT US css ends*************************************************/
+
+/*--------------------------------- our story csss --------------------------------------------------*/
+#story-behind{
+    height:1000px;
+    background:linear-gradient(to bottom, rgba(2, 4, 17, 0.2),rgba(25, 31, 34, 0.89)),
+           url("../images/bg.jpg");       
+  background-size:100%;
+  background-attachment:fixed;
+   color:white;
+   position:relative;
+   overflow:hidden;
+  }
+  
+  .story-container{
+    width:600px;
+    height:700px;
+    margin:10% 10% 10% 10%;
+    float:left;
+   
+  }
+  @media screen and (max-width:800px){
+  
+  .story-container{
+    width:90%;
+    height:700px;
+    margin:40% 5% 0% 5%;
+    float:left;
+    
+  }
+  }
+/*********************************** our story css ends*************************************************/
+
+
+/*--------------------------------- map csss --------------------------------------------------*/
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:20%;
+    position:relative;
+    height:0;
+  }
+  .map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+  @media screen and (max-width:800px){
+      .map-responsive{
+          height: 400px;
+      }
+  }
+/*********************************** map css ends*************************************************/
+
+/*--------------------------------- footer csss --------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+
+.footer-distributed{
+	background:black;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+/*map*/
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:20%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  /* image for rwstaurants body*/
+  .imgs{
+    width: 100%;
+  }
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+  
+/*********************************** footer css ends*************************************************/
+
+
+
+
+/*######################
+
+******************************** resuturents.html ****************************************************
+
+
+#######################*/
+
+/*--------------------------top ko slider-----------------------------------*/
+.container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    margin-top: 30px;
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  /*====================================== slider for resurent page ends------------------------------*/
+  
+
+
+  /*######################
+
+******************************** catering.html ****************************************************
+
+
+#######################*/
+
+  /*catering page*/
+#cater{
+    height:1000px;
+    background:linear-gradient(to bottom, rgba(2, 4, 17, 0.2),rgba(25, 31, 34, 0.89)),
+           url("../images/f1.jpg");       
+  background-size:100%;
+  background-attachment:fixed;
+   color:white;
+   position:relative;
+   overflow:hidden;
+  }
+  
+  .cater-container{
+    width:700px;
+    height:700px;
+    margin:10% 10% 10% 10%;
+    float:left;
+    background: white;
+  }
+  @media screen and (max-width:800px){
+  
+  .cater-container{
+    width:90%;
+    height:700px;
+    margin:40% 5% 0% 5%;
+    float:left;
+    background: white;
+  }
+  
+  /*cater form*/
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color:black;
+  }
+  
+  input[type=submit] {
+    background-color: #262626;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+   
+  }
+  
+  input[type=submit]:hover {
+    background-color: #bbb;
+  }
+  
+  .container1 {
+    color:black;
+    border-color:white;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+  /*cater info*/
+  .cater-info {
+    padding: 50px;
+    text-align: center;
+    background-color: #262626;
+  }
+  
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /*download button */
+  .btn1 {
+    background-color: #262626;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 18x;
+  }
+  /* Darker background on mouse-over */
+  .btn1:hover {
+    background-color: #bbb;
+  }
+  h4{
+    color: white;
+  }
+
+
+
+   /*######################
+
+******************************** gallery.html ****************************************************
+
+
+#######################*/
+
+
+  /* GALLERY*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  
+   /*######################
+
+******************************** menu.html ****************************************************
+
+
+#######################*/
+
+
+
+  @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
+
+
+:active, :focus {
+	outline-style: none;
+}
+
+a:hover {
+	color: #cc1400;
+	text-decoration: underline;
+}
+
+
+
+#site {
+	width:100%;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+#masthead {
+	margin-top: 3em;
+	
+	border-bottom: 1px solid #ddd;
+}
+
+#masthead h1 {
+	margin: 0;
+	font-size: 2em;
+	overflow: hidden;
+	color: #900;
+	line-height:25px;
+}
+
+.tagline {
+	float: right;
+	color: #666;
+	font-size: 14px;
+	padding-top: 3.5em;
+}
+
+#products ul {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+  overflow: hidden;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+#products li {
+	
+	width: 20%;
+	margin: 0 1%;
+	display: block;
+}
+
+.product-image {
+	margin: 0 auto 1em auto;
+	background: #000;
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+
+	
+}
+
+.product-description {
+	
+	background:white;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.product-name {
+	text-align: center;
+	color: #fc0;
+	margin: 0;
+	
+	border-bottom: 1px dotted #666;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.product-price {
+
+	font-size: 1.2em;
+	text-align: center;
+	margin-right:2em;
+	background: #fff;
+  color: #800;
+  display:inline-block;
+	
+	
+}
+
+.add-to-cart{
+  float:right;
+}
+
+form input.qty {
+	width: 40px;
+	border: 1px solid #eee;
+	font: 1em 'PT Serif', serif;
+	background: #f9f9f9;
+	color: #000;
+	border-radius: 3px;
+	
+}
+
+.btn, a.btn {
+	display: inline-block;
+	background: #cc1400;
+	color: #fff;
+	font: 1em 'PT Serif', serif;
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #a00;
+}
+
+
+#site-info {
+	height: 3em;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #cc8500;
+	position: absolute;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+}
+
+body#checkout-page #site-info {
+	position: static;
+}
+
+#shopping-cart {
+	margin: 1.5em 0;
+}
+
+.shopping-cart {
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.shopping-cart th {
+	font-size: 1.3em;
+	padding: 0.3em;
+	width: 33.3%;
+	border: 1px solid #ddd;
+	text-transform: uppercase;
+}
+
+.shopping-cart td {
+	padding: 0.3em;
+	width: 33.3%;
+	border: 1px solid #ddd;
+}
+
+.shopping-cart tr:nth-child(even) {
+	background: #fafafa;
+}
+
+.shopping-cart td.pdelete {
+	text-align: center;
+}
+
+.pdelete a,
+.pdelete a:hover {
+	color: #c00;
+	text-decoration: none;
+	font-size: 2.5em;
+	display: block;
+	text-align: center;
+}
+
+#shopping-cart-actions {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#shopping-cart-actions li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+#pricing {
+	padding: 0.5em;
+	margin: 1em 0;
+	background: #fafafa;
+}
+
+#sub-total, #shipping {
+	margin: 1.5em 0;
+	text-align: right;
+}
+
+#sub-total span,
+#shipping span {
+	margin-left: 1em;
+}
+
+#content > h1,
+#checkout-order-form h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+#pricing #sub-total,
+#pricing #shipping {
+	margin: 1em 0;
+}
+
+#checkout-order-form {
+	margin: 1.5em 0;
+}
+
+#checkout-order-form fieldset {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 1em;
+	margin-bottom: 1.3em;
+}
+
+#checkout-order-form legend {
+	padding: 0.3em;
+	background: #fafafa;
+	font-weight: bold;
+}
+
+#checkout-order-form div {
+	margin-bottom: 1em;
+}
+
+#checkout-order-form label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.3em;
+	text-align: left;
+}
+
+#checkout-order-form input[type="text"] {
+	width: 200px;
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 0.3em;
+}
+
+#checkout-order-form select {
+	width: 200px;
+	display: block;
+}
+
+.message {
+	display: block;
+	margin: 0.5em 0;
+	color: red;
+}
+
+#user-details {
+	margin: 1.5em 0;
+}
+
+#user-details > h2 {
+	text-align: center;
+	font-size: 2em;
+}
+
+#user-details-content {
+	margin: 1.5em 0;
+	padding: 1em;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+#user-details-content .detail {
+	float: left;
+	width: 46%;
+}
+
+#user-details-content .detail.right {
+	float: right;
+}
+
+#user-details-content .detail > h2 {
+	text-align: center;
+	font-size: 1.6em;
+	margin-bottom: 0.5em;
+}
+
+#user-details-content ul {
+	margin: 0 0 1em 0;
+	padding: 0;
+	list-style: none;
+}
+
+#user-details-content li {
+	display: block;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #ddd;
+}
+
+#paypal-form {
+	margin: 1.5em 0;
+}
+
+

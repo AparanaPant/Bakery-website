@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bakery Site</title>
+    <!-----------------THE MAIN STYLE SHEET---------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!------------This link is for icons in the page------------------------------------------->
+    <script src="https://kit.fontawesome.com/4e40b5e662.js" crossorigin="anonymous"></script>
+    <!-------------------buttons-by shreya i guess--------------------------------------------->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+ <!--================================= main nav bar ==================================================-->
+     <section class="nav-bar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="index.html"><img src="assets/images/logo.png"></a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#about">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="restaurants.html">RESTAURANTS</a>
+                            </li>
+                            <li>
+                                <a href="catering.html">BOOK EVENTS</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">GALLERY</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="openForm()">LOG IN</a>
+                    </li>
+                    
+                    <li>
+                        <a href="cart.html">CART <i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="menu.html">CAKES</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">COOKIES</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">BREAD</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li>
+                        <form>
+                            <input type="text" name="search" placeholder="Search..">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+  </section>
+  <!---**********************************NAV BAR ENDS HERE************************************************-->
+  
+  <!-----------------------------------parallax slider start ------------------------------------------->
+  <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/yum.jpg"></div>
+  <!--***************************parallax slider ends*************************************************-->
+
+  <!-------------------THree boxes starts--------------------------------------------------------------->
+  <div class="threebox">
+        <br>
+       <center> <h3> From freshly baked cupcakes and </h3></center>
+        <h3>rich fudgy brownies to decadent cream cheese-filled pumpkin muffins,</h3></center>
+        <br>
+        <br>
+        <div class="about-inner-wrap">
+          <div class="each-box">
+            <img src="assets/images/pic.jpg">
+            <h3>OUR RESTAURANTS</h3>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur deleniti obcaecati odio sunt maxime ab esse iure beatae possimus magni corrupti quas ipsam, aut officia earum unde quidem neque adipisci! </p>
+            <a href="restaurants.html" class="w3-btn w3-black">RESTAURANTS</a>
+            <hr>
+          </div>
+          <div class="each-box">
+              <img src="assets/images/pic2.jpg">
+              <h3>OUR MENU</h3>
+              <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur deleniti obcaecati odio sunt maxime ab esse iure beatae possimus magni corrupti quas ipsam, aut officia earum unde quidem neque adipisci! </p>
+              <a href="assets/buy-food.html" class="w3-btn w3-black">MENU</a>
+              <hr>
+            </div>
+          <div class="each-box">
+              <img src="assets/images/pic3.jpg">
+              <h3>BOOK FOR EVENTS</h3>
+              <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur deleniti obcaecati odio sunt maxime ab esse iure beatae possimus magni corrupti quas ipsam, aut officia earum unde quidem neque adipisci! </p>
+              <a href="catering.html" class="w3-btn w3-black">BOOK NOW</a>
+              <hr>
+            </div>
+        </div>
+      </div>
+  <!--***************************there boxes ends*************************************************-->
+
+  <!------------------------------About us section starts--------------------------------------------->
+  <div  id="about" class="about-section">
+
+        <div class="inner-container">
+           <a name="about"> <h1> ABOUT US</h1></a>
+            <p class="text">
+                lorem  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                 remaining essentially unchanged.
+            </p>
+        </div>
+</div>
+  <!--*************************** ABOUT US SECTION ENDS *************************************************-->
+
+   <!------------------------------our story section starts--------------------------------------------->
+   <div id="story-behind">
+        <div class="story-container">
+          <br>
+          <h1>OUR STORY</h1>
+          <br>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+          <br>
+          <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, </p>
+          <br> 
+          <p>sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repellat consequuntur est pariatur amet quod officiis minus in, et facilis doloribus quia iusto optio a fugiat saepe eum earum ipsum.</p>
+        <br>
+          <center><img src="assets/images/c1.jpg"></center>
+        </div>
+      </div>
+   <!--*************************** our story SECTION ENDS *************************************************-->
+
+
+    <!------------------------------map section starts--------------------------------------------->
+    <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.451278418032!2d85.30937981506199!3d27.70334958279355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1855bfb12acf%3A0x7ea7da1507064f1f!2sNew%20Rd%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1592193221015!5m2!1sen!2snp" 
+            width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" ></iframe>
+    </div>
+   <!--*************************** map SECTION ENDS *************************************************-->
+
+
+    <!------------------------------footer section starts--------------------------------------------->
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>BAKERY<span> COMPANY</span></h3>
+
+				<p class="footer-links">
+					<a href="#" class="link-1">Home</a>
+					
+					<a href="#">Blog</a>
+				
+					<a href="#">Pricing</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Faq</a>
+					
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Bakery© 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+				<a name="contact">	<i class="fa fa-map-marker"></i></a>
+					<p><span>MAITIDEVI, KATHMANDU</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>345345353455</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">bakery@gmail.com</a></p>
+        </div>
+        <br>
+      <div>
+        <a class="facebookBtn smGlobalBtn" href="social-media-profile-url" ></a>
+	<a class="twitterBtn smGlobalBtn" href="social-media-profile-url" ></a>
+	<a class="googleplusBtn smGlobalBtn" href="social-media-profile-url" ></a>
+	<a class="linkedinBtn smGlobalBtn" href="social-media-profile-url" ></a>
+</div>
+			</div>
+
+			<div class="footer-right">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbakerycafe&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
+         width="280" height="350" style="border:none;overflow:hidden" 
+        scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+			</div>
+
+    </footer>
+   <!--*************************** footer SECTION ENDS *************************************************-->
+     <!---------------------------login popup----------------------------------------------->
+  <div class="form-popup" id="myForm" >
+
+        <form  action="/action_page.php" class="form-container">
+    
+        <span class="close" onclick="closeForm()">&times;</span> <br>
+    
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+       
+          <button type="submit" class="btn">Login</button> <hr>
+          <p> <b>Or login via social media </p> <br>
+        <center><a href="https://www.facebook.com/" class="fbbtn" style="color:  #3B5998">
+              <i class="fa fa-facebook fa-fw" style="color:  #3B5998"></i> Login with Facebook
+             </a></center> <br> 
+              <center><a href="https://www.twitter.com/" class="twitterbtn" style="color: #55ACEE">
+              <i class="fa fa-twitter fa-fw" style="color: #55ACEE"></i> Login with Twitter
+             </a></center> <br> 
+              <center><a href="https://www.gmail.com/" class="googlebtn"style="color: red">
+              <i class="fa fa-google fa-fw" style="color: red"></i> Login with Google
+             </a></center> <hr>
+             <p><b> Don't have an account?</b> <a href="#"  style="color: #55ACEE"> SignUp </a> </p>
+        </form>
+      </div>
+      
+      <!--**********************************login pop up ends*****************************************-->
+
+  <!--####################################### SCRIPTS ########################################################-->
+
+    <!------------------------- import jquery for nav------------------->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+   <!----------------for slider ------------------------->
+ <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
+
+  <!----------------------------Main script file-------------------------->
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
