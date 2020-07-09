@@ -1226,6 +1226,9 @@ a:hover {
   #products li{
       max-width: 100%;
   }
+  #myBtn{
+     margin-bottom: 10px;
+  }
 }
 
 .product-image {
@@ -1610,4 +1613,27 @@ body#checkout-page #site-info {
 .rssBtn:hover{
       color: #e88845;
       background: #fff;
+}
+/* back to top */
+#myBtn {
+  display: none;
+  position: relative;
+  bottom: 20px;
+
+  left: 80px;
+  top: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
